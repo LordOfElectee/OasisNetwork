@@ -21,3 +21,5 @@ echo 'export OASIS_UNSAFE_ALLOW_DEBUG_ENCLAVES="1"' >> $HOME/.bash_profile
 echo 'OASIS_BADGER_NO_JEMALLOC="1"' >> $HOME/.bash_profile
 source $HOME/.bash_profile
 make
+mv ./go/bin/oasis-node/oasis-node /usr/local/bin/
+oasis-node -v
