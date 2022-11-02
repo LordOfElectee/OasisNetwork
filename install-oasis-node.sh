@@ -18,8 +18,8 @@ rustup show
 echo 'export OASIS_UNSAFE_SKIP_AVR_VERIFY="1"' >> $HOME/.bash_profile
 echo 'export OASIS_UNSAFE_SKIP_KM_POLICY="1"' >> $HOME/.bash_profile
 echo 'export OASIS_UNSAFE_ALLOW_DEBUG_ENCLAVES="1"' >> $HOME/.bash_profile
-echo 'OASIS_BADGER_NO_JEMALLOC="1"' >> $HOME/.bash_profile
+echo 'export OASIS_BADGER_NO_JEMALLOC="1"' >> $HOME/.bash_profile
 source $HOME/.bash_profile
 make
-mv ./go/bin/oasis-node/oasis-node /usr/local/bin/
+mv ./go/oasis-node/oasis-node /usr/local/bin/
 oasis-node -v
