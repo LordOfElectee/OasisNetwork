@@ -8,6 +8,7 @@ echo 'export GOPATH=$HOME/go' >> $HOME/.bash_profile
 echo 'export GO111MODULE=on' >> $HOME/.bash_profile
 echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile && source $HOME/.bash_profile
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env"
 rustup install nightly
 cargo +nightly install --git https://github.com/fortanix/rust-sgx --rev 998c34d158a69dd1af33f22587e8ae1c26ca6a27 fortanix-sgx-tools
 cargo +nightly install --git https://github.com/fortanix/rust-sgx --rev 998c34d158a69dd1af33f22587e8ae1c26ca6a27 sgxs-tools
